@@ -1,6 +1,9 @@
 export interface Experience {
   title: string;
-  company: string;
+  company: {
+    url: string;
+    name: string;
+  };
   date: string;
   skills: string[];
   description: string;

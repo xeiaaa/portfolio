@@ -16,35 +16,47 @@ export const navItems = [
 export const experiences = [
   {
     title: "Top-Rated Plus Full-Stack Developer",
-    company: "Upwork",
     date: "2019 — PRESENT",
     skills: ["React", "Node.js", "MongoDB", "PostgreSQL", "Next.js"],
     description:
       "Delivered multiple React + Node.js apps with consistent 5-star reviews. Designed MongoDB/PostgreSQL schemas, ensuring scalable data handling. Maintained 100% job success score through quality delivery.",
+    company: {
+      name: "Upwork",
+      url: "https://www.upwork.com",
+    },
   },
   {
     title: "Senior Software Engineer",
-    company: "Cloudstaff",
     date: "2018 — 2019",
     skills: ["WooCommerce", "WordPress", "PHP", "JavaScript", "Architecture"],
     description:
       "Architected solutions and mentored junior devs. Built WooCommerce plugin for intimate.io. Designed secure, maintainable mobile project solutions.",
+    company: {
+      name: "Cloudstaff",
+      url: "https://www.cloudstaff.com/",
+    },
   },
   {
     title: "Full-Stack Developer",
-    company: "Volenday",
     date: "2016 — 2017",
     skills: ["Ionic", "Node.js", "JavaScript", "Headless CMS", "REST APIs"],
     description:
       "Built Asia CEO Awards site and a headless CMS (AHA). Developed employee tracking app (Ionic + Node.js).",
+    company: {
+      name: "Volenday",
+      url: "https://www.volenday.com/",
+    },
   },
   {
     title: "Freelance Web Developer",
-    company: "",
     date: "2014 — 2020",
     skills: ["PSD-to-HTML", "React", "Redux", "Socket.IO", "Web Scraping"],
     description:
       "Worked on PSD-to-HTML, React/Redux, and mobile apps. Implemented real-time functionality with Socket.IO and web scraping utilities.",
+    company: {
+      name: "",
+      url: "",
+    },
   },
 ];
 
