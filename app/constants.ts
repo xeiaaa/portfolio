@@ -8,8 +8,12 @@ export const navItems = [
     id: "experience",
   },
   {
-    label: "Projects",
-    id: "projects",
+    label: "Professional Projects",
+    id: "professional-projects",
+  },
+  {
+    label: "Personal Projects",
+    id: "personal-projects",
   },
 ];
 
@@ -67,7 +71,7 @@ export const projects = [
     builtWith: ["React", "GrapesJS", "TypeScript", "Node.js", "Jest"],
     description:
       "Optimized GrapesJS integration with React improving editor load speed by 3×. Refactored large components into modular units and rebuilt state management for better responsiveness. Added automated React tests and enforced strict TypeScript/ESLint rules.",
-    image: "",
+    image: "/thumbnails/investorprez.png",
     video: "",
     downloads: "",
     bookmarked: "",
@@ -83,7 +87,7 @@ export const projects = [
     builtWith: ["NestJS", "React", "MongoDB", "OpenAI", "TypeScript"],
     description:
       "Built from scratch for scalability. Integrated WordPress, WooCommerce, Facebook Messenger, and Google Drive for contextual data. Developed a custom web scraping utility for dynamic knowledge enrichment.",
-    image: "",
+    image: "/thumbnails/chatbuildx.png",
     video: "",
     downloads: "",
     bookmarked: "",
@@ -99,7 +103,7 @@ export const projects = [
     builtWith: ["React", "TypeScript", "Node.js", "react-window"],
     description:
       "Implemented FIFO vs. LIFO strategy comparison for share balance validation and parcel-level error detection (trade date, price range, dishonesty). Built virtualization for 100K+ rows to ensure smooth dataset interaction.",
-    image: "",
+    image: "/thumbnails/csv-analyser-placeholder.jpg",
     video: "",
     downloads: "",
     bookmarked: "",
@@ -115,7 +119,7 @@ export const projects = [
     builtWith: ["React", "Node.js", "Socket.IO", "Twilio"],
     description:
       "Developed Meet & Greet feature with real-time 1:1 video sessions (Socket.IO + Twilio). Built queueing system for low-latency, high-traffic live events.",
-    image: "",
+    image: "/thumbnails/moment.png",
     video: "",
     downloads: "",
     bookmarked: "",
@@ -140,7 +144,7 @@ export const projects = [
     description:
       "Designed backend with NestJS and MongoDB, with automated testing for reliability. Built admin dashboard (React + Vite) and participant app (Next.js). Integrated PayPal for secure payments and managed AWS deployment.",
     link: "https://anzmtg.com.au",
-    image: "",
+    image: "/thumbnails/anzmtg.png",
     video: "",
     downloads: "",
     bookmarked: "",
