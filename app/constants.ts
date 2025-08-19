@@ -55,12 +55,15 @@ export const projects = [
     builtWith: ["React", "GrapesJS", "TypeScript", "Node.js", "Jest"],
     description:
       "Optimized GrapesJS integration with React improving editor load speed by 3×. Refactored large components into modular units and rebuilt state management for better responsiveness. Added automated React tests and enforced strict TypeScript/ESLint rules.",
-    link: "",
     image: "",
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "Sonority Pty Ltd",
+    link: "",
+    company: {
+      name: "Sonority Pty Ltd",
+      url: "https://sonority.com.au",
+    },
   },
   {
     title: "ChatBuildX — AI Chatbot Builder",
@@ -68,12 +71,15 @@ export const projects = [
     builtWith: ["NestJS", "React", "MongoDB", "OpenAI", "TypeScript"],
     description:
       "Built from scratch for scalability. Integrated WordPress, WooCommerce, Facebook Messenger, and Google Drive for contextual data. Developed a custom web scraping utility for dynamic knowledge enrichment.",
-    link: "https://www.chatbuildx.com/",
     image: "",
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "Upwork",
+    link: "https://www.chatbuildx.com/",
+    company: {
+      name: "Upwork",
+      url: "https://www.upwork.com",
+    },
   },
   {
     title: "CSV Analyser — Trading Data Validator",
@@ -81,12 +87,15 @@ export const projects = [
     builtWith: ["React", "TypeScript", "Node.js", "react-window"],
     description:
       "Implemented FIFO vs. LIFO strategy comparison for share balance validation and parcel-level error detection (trade date, price range, dishonesty). Built virtualization for 100K+ rows to ensure smooth dataset interaction.",
-    link: "",
     image: "",
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "Sonority Pty Ltd",
+    link: "",
+    company: {
+      name: "Sonority Pty Ltd",
+      url: "",
+    },
   },
   {
     title: "Moment — Ticketed Live Experience Platform",
@@ -94,12 +103,15 @@ export const projects = [
     builtWith: ["React", "Node.js", "Socket.IO", "Twilio"],
     description:
       "Developed Meet & Greet feature with real-time 1:1 video sessions (Socket.IO + Twilio). Built queueing system for low-latency, high-traffic live events.",
-    link: "https://moment.co",
     image: "",
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "Upwork",
+    link: "https://moment.co",
+    company: {
+      name: "Upwork",
+      url: "https://www.upwork.com",
+    },
   },
   {
     title: "ANZ MTG Super Series — Event Management Platform",
@@ -120,7 +132,10 @@ export const projects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "Upwork",
+    company: {
+      name: "Upwork",
+      url: "https://www.upwork.com",
+    },
   },
   {
     title: "Contract Generator — Word Document",
@@ -133,7 +148,10 @@ export const projects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "",
+    company: {
+      name: "",
+      url: "",
+    },
   },
   {
     title: "Transfer Web App Modules to React.js",
@@ -146,7 +164,10 @@ export const projects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "",
+    company: {
+      name: "",
+      url: "",
+    },
   },
   {
     title: "Sports App",
@@ -159,7 +180,10 @@ export const projects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "",
+    company: {
+      name: "",
+      url: "",
+    },
   },
   {
     title: "GaConnector",
@@ -171,7 +195,10 @@ export const projects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "",
+    company: {
+      name: "",
+      url: "",
+    },
   },
   {
     title: "Korean In-House Casino App",
@@ -191,7 +218,10 @@ export const projects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "",
+    company: {
+      name: "",
+      url: "",
+    },
   },
   {
     title: "Factor 75",
@@ -204,7 +234,10 @@ export const projects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "",
+    company: {
+      name: "",
+      url: "",
+    },
   },
   {
     title: "Asia CEO Awards",
@@ -217,7 +250,10 @@ export const projects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "Volenday",
+    company: {
+      name: "Volenday",
+      url: "",
+    },
   },
 ];
 

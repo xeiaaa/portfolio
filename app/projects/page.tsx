@@ -8,10 +8,13 @@ const projectsData = projects
   .map((project) => ({
     year: parseInt(project.date),
     name: project.title,
-    madeAt: project.madeAt || "",
     builtWith: project.builtWith,
     link: project.link || "",
     linkText: project.link || "",
+    company: {
+      url: project.company?.url || "",
+      name: project.company?.name || "",
+    },
   }))
   .sort((a, b) => b.year - a.year);
 
@@ -57,7 +60,7 @@ export default function ProjectsPage() {
                   </span>
                 </td>
                 <td className="py-4 pr-8 text-secondary text-sm">
-                  {project.madeAt || "-"}
+                  {project.company.name || "-"}
                 </td>
                 <td className="py-4 pr-8">
                   <div className="flex flex-wrap gap-2">
