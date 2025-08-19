@@ -51,7 +51,7 @@ export default function PortfolioLayout() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-center min-h-screen px-12 py-24 gap-24 lg:gap-4 bg-main text-primary max-w-screen-xl mx-auto relative">
+    <div className="flex flex-col lg:flex-row lg:justify-center min-h-screen px-4 py-8 lg:px-12 lg:py-24 gap-8 lg:gap-4 bg-main text-primary max-w-screen-xl mx-auto relative">
       {/* Sidebar */}
       <aside className="lg:w-1/2 flex flex-col justify-between lg:h-[calc(100vh-160px)] gap-10 lg:sticky lg:top-24">
         {/* Name & Title */}
