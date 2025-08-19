@@ -1,26 +1,124 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Light Theme Colors */
+  --primary-teal: #2d9aa7;
+  --primary-teal-dark: #1f7a85;
+  --primary-teal-light: #4db5c2;
+  --neutral-white: #ffffff;
+  --neutral-light-gray: #f5f6f7;
+  --neutral-medium-gray: #e8eaed;
+  --neutral-dark-gray: #9aa0a6;
+  --neutral-charcoal: #5f6368;
+  --text-primary: #202124;
+  --text-secondary: #5f6368;
+  --text-light: #80868b;
+  --text-on-teal: #ffffff;
+  --background-main: #ffffff;
+  --background-sidebar: #f8f9fa;
+  --background-hover: #f1f3f4;
+  --background-selected: #e8f0fe;
+  --accent-success: #34a853;
+  --accent-warning: #fbbc04;
+  --accent-error: #ea4335;
+  --accent-info: #4285f4;
+  --border-light: #dadce0;
+  --border-medium: #c4c7c9;
+  --border-focus: #1a73e8;
+
+  /* Current theme colors (light theme) */
+  --current-background: var(--background-main);
+  --current-text-primary: var(--text-primary);
+  --current-text-secondary: var(--text-secondary);
+  --current-text-muted: var(--text-light);
+  --current-highlight: var(--primary-teal);
+  --current-accent-bg: var(--background-sidebar);
+  --current-border: var(--border-light);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--current-background);
+  --color-foreground: var(--current-text-primary);
+  --font-sans: "Inter", sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--current-background);
+  color: var(--current-text-primary);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Color Utility Classes */
+.text-primary {
+  color: var(--current-text-primary);
+}
+.text-secondary {
+  color: var(--current-text-secondary);
+}
+.text-muted {
+  color: var(--current-text-muted);
+}
+.text-highlight {
+  color: var(--current-highlight);
+}
+.text-on-teal {
+  color: var(--text-on-teal);
+}
+
+.bg-main {
+  background-color: var(--current-background);
+}
+.bg-primary {
+  background-color: var(--current-text-primary);
+}
+.bg-accent {
+  background-color: var(--current-accent-bg);
+}
+.bg-highlight {
+  background-color: var(--current-highlight);
+}
+.bg-secondary {
+  background-color: var(--current-text-secondary);
+}
+.bg-muted {
+  background-color: var(--current-text-muted);
+}
+.bg-hover {
+  background-color: var(--background-hover);
+}
+
+.border-primary {
+  border-color: var(--current-border);
+}
+.border-secondary {
+  border-color: var(--current-text-secondary);
+}
+.border-highlight {
+  border-color: var(--current-highlight);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--current-accent-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--current-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--current-highlight);
 }
