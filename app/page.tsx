@@ -8,6 +8,7 @@ import ExperienceSection from "./components/ExperienceSection";
 import About from "./components/About";
 import Socials from "./components/Socials";
 import PersonalProjectPreviews from "./components/PersonalProjectPreviews";
+import Articles from "./components/Articles";
 
 const sectionIds = navItems.map((item) => item.id);
 
@@ -119,7 +120,7 @@ export default function PortfolioLayout() {
         <PersonalProjectPreviews />
 
         {/* Articles Section */}
-        {/* <Articles /> */}
+        <Articles />
 
         {/* Footer */}
         <footer className="mt-auto pt-16">
