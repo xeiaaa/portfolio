@@ -1,6 +1,9 @@
 export interface Experience {
   title: string;
-  company: string;
+  company: {
+    url: string;
+    name: string;
+  };
   date: string;
   skills: string[];
   description: string;
@@ -16,7 +19,10 @@ export interface Project {
   downloads: string;
   bookmarked: string;
   builtWith: string[];
-  madeAt: string;
+  company: {
+    url: string;
+    name: string;
+  };
 }
 
 export interface NavItem {

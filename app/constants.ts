@@ -8,43 +8,59 @@ export const navItems = [
     id: "experience",
   },
   {
-    label: "Projects",
-    id: "projects",
+    label: "Professional Projects",
+    id: "professional-projects",
+  },
+  {
+    label: "Personal Projects",
+    id: "personal-projects",
   },
 ];
 
 export const experiences = [
   {
     title: "Top-Rated Plus Full-Stack Developer",
-    company: "Upwork",
     date: "2019 — PRESENT",
     skills: ["React", "Node.js", "MongoDB", "PostgreSQL", "Next.js"],
     description:
       "Delivered multiple React + Node.js apps with consistent 5-star reviews. Designed MongoDB/PostgreSQL schemas, ensuring scalable data handling. Maintained 100% job success score through quality delivery.",
+    company: {
+      name: "Upwork",
+      url: "https://www.upwork.com",
+    },
   },
   {
     title: "Senior Software Engineer",
-    company: "Cloudstaff",
     date: "2018 — 2019",
     skills: ["WooCommerce", "WordPress", "PHP", "JavaScript", "Architecture"],
     description:
       "Architected solutions and mentored junior devs. Built WooCommerce plugin for intimate.io. Designed secure, maintainable mobile project solutions.",
+    company: {
+      name: "Cloudstaff",
+      url: "https://www.cloudstaff.com/",
+    },
   },
   {
     title: "Full-Stack Developer",
-    company: "Volenday",
     date: "2016 — 2017",
     skills: ["Ionic", "Node.js", "JavaScript", "Headless CMS", "REST APIs"],
     description:
       "Built Asia CEO Awards site and a headless CMS (AHA). Developed employee tracking app (Ionic + Node.js).",
+    company: {
+      name: "Volenday",
+      url: "https://www.volenday.com/",
+    },
   },
   {
     title: "Freelance Web Developer",
-    company: "",
     date: "2014 — 2020",
     skills: ["PSD-to-HTML", "React", "Redux", "Socket.IO", "Web Scraping"],
     description:
       "Worked on PSD-to-HTML, React/Redux, and mobile apps. Implemented real-time functionality with Socket.IO and web scraping utilities.",
+    company: {
+      name: "",
+      url: "",
+    },
   },
 ];
 
@@ -55,12 +71,15 @@ export const projects = [
     builtWith: ["React", "GrapesJS", "TypeScript", "Node.js", "Jest"],
     description:
       "Optimized GrapesJS integration with React improving editor load speed by 3×. Refactored large components into modular units and rebuilt state management for better responsiveness. Added automated React tests and enforced strict TypeScript/ESLint rules.",
-    link: "",
-    image: "",
+    image: "/thumbnails/investorprez.png",
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "Sonority Pty Ltd",
+    link: "",
+    company: {
+      name: "Sonority Pty Ltd",
+      url: "https://sonority.com.au",
+    },
   },
   {
     title: "ChatBuildX — AI Chatbot Builder",
@@ -68,12 +87,15 @@ export const projects = [
     builtWith: ["NestJS", "React", "MongoDB", "OpenAI", "TypeScript"],
     description:
       "Built from scratch for scalability. Integrated WordPress, WooCommerce, Facebook Messenger, and Google Drive for contextual data. Developed a custom web scraping utility for dynamic knowledge enrichment.",
-    link: "https://www.chatbuildx.com/",
-    image: "",
+    image: "/thumbnails/chatbuildx.png",
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "Upwork",
+    link: "https://www.chatbuildx.com/",
+    company: {
+      name: "Upwork",
+      url: "https://www.upwork.com",
+    },
   },
   {
     title: "CSV Analyser — Trading Data Validator",
@@ -81,12 +103,15 @@ export const projects = [
     builtWith: ["React", "TypeScript", "Node.js", "react-window"],
     description:
       "Implemented FIFO vs. LIFO strategy comparison for share balance validation and parcel-level error detection (trade date, price range, dishonesty). Built virtualization for 100K+ rows to ensure smooth dataset interaction.",
-    link: "",
-    image: "",
+    image: "/thumbnails/csv-analyser-placeholder.jpg",
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "Sonority Pty Ltd",
+    link: "",
+    company: {
+      name: "Sonority Pty Ltd",
+      url: "",
+    },
   },
   {
     title: "Moment — Ticketed Live Experience Platform",
@@ -94,12 +119,15 @@ export const projects = [
     builtWith: ["React", "Node.js", "Socket.IO", "Twilio"],
     description:
       "Developed Meet & Greet feature with real-time 1:1 video sessions (Socket.IO + Twilio). Built queueing system for low-latency, high-traffic live events.",
-    link: "https://moment.co",
-    image: "",
+    image: "/thumbnails/moment.png",
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "Upwork",
+    link: "https://moment.co",
+    company: {
+      name: "Upwork",
+      url: "https://www.upwork.com",
+    },
   },
   {
     title: "ANZ MTG Super Series — Event Management Platform",
@@ -116,11 +144,14 @@ export const projects = [
     description:
       "Designed backend with NestJS and MongoDB, with automated testing for reliability. Built admin dashboard (React + Vite) and participant app (Next.js). Integrated PayPal for secure payments and managed AWS deployment.",
     link: "https://anzmtg.com.au",
-    image: "",
+    image: "/thumbnails/anzmtg.png",
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "Upwork",
+    company: {
+      name: "Upwork",
+      url: "https://www.upwork.com",
+    },
   },
   {
     title: "Contract Generator — Word Document",
@@ -133,7 +164,10 @@ export const projects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "",
+    company: {
+      name: "",
+      url: "",
+    },
   },
   {
     title: "Transfer Web App Modules to React.js",
@@ -146,7 +180,10 @@ export const projects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "",
+    company: {
+      name: "",
+      url: "",
+    },
   },
   {
     title: "Sports App",
@@ -159,7 +196,10 @@ export const projects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "",
+    company: {
+      name: "",
+      url: "",
+    },
   },
   {
     title: "GaConnector",
@@ -171,7 +211,10 @@ export const projects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "",
+    company: {
+      name: "",
+      url: "",
+    },
   },
   {
     title: "Korean In-House Casino App",
@@ -191,7 +234,10 @@ export const projects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "",
+    company: {
+      name: "",
+      url: "",
+    },
   },
   {
     title: "Factor 75",
@@ -204,7 +250,10 @@ export const projects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "",
+    company: {
+      name: "",
+      url: "",
+    },
   },
   {
     title: "Asia CEO Awards",
@@ -217,10 +266,80 @@ export const projects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    madeAt: "Volenday",
+    company: {
+      name: "Volenday",
+      url: "",
+    },
   },
 ];
 
+export const personalProjects = [
+  {
+    title: "Chari-ty",
+    date: "2025",
+    builtWith: ["NestJS", "Prisma", "React", "NextJS", "TypeScript"],
+    description:
+      "Chari-ty is a full-stack fundraising platform that connects donors and organizers through transparent and accessible charity campaigns. Built with a Node.js/Prisma backend and a React frontend, it supports secure authentication, campaign management, and seamless donation flows. The platform delivers a responsive, user-friendly experience while ensuring reliable API-driven communication between frontend and backend services.",
+    image: "/thumbnails/chari-ty.png",
+    video: "",
+    downloads: "",
+    bookmarked: "",
+    link: "https://chari-ty-frontend.vercel.app/",
+    company: {
+      name: "",
+      url: "",
+    },
+  },
+  {
+    title: "Gunpla Sekai",
+    date: "2025",
+    builtWith: [
+      "Next.js",
+      "React",
+      "Three.js",
+      "@google/model-viewer",
+      "Mantine",
+      "TypeScript",
+    ],
+    description:
+      "Gunpla Sekai is a Next.js application for exploring and interacting with 3D Gunpla (Gundam plastic model) designs. It integrates Three.js and Google’s Model Viewer to render models with real-time interaction, while Mantine provides a polished and responsive UI with notifications and tooltips. The platform delivers an engaging experience for hobbyists to view, customize, and showcase their Gunpla builds online.",
+    image: "",
+    video: "",
+    downloads: "",
+    bookmarked: "",
+    link: "",
+    company: {
+      name: "",
+      url: "",
+    },
+  },
+  {
+    title: "Custom Kickz",
+    date: "2025",
+    builtWith: [
+      "NestJS",
+      "Prisma",
+      "React",
+      "Vite",
+      "TypeScript",
+      "Three.js",
+      "Tailwind CSS",
+      "Clerk",
+      "OpenAI",
+    ],
+    description:
+      "Custom Kickz is a full-stack 3D sneaker customization platform where users can design and personalize sneakers in real time. The React + TypeScript frontend (with Three.js, Tailwind CSS, Clerk, and OpenAI integration) enables interactive editing, AI-driven color generation, and a responsive user experience. Backed by a NestJS/TypeScript backend with Prisma, the platform ensures scalable, reliable performance with full testing support for seamless sneaker design workflows.",
+    image: "",
+    video: "",
+    downloads: "",
+    bookmarked: "",
+    link: "",
+    company: {
+      name: "",
+      url: "",
+    },
+  },
+];
 export const Profile = {
   name: "Bret Axl Sebastian Pura",
   title: "Full Stack Developer",

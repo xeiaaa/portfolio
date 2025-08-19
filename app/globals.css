@@ -122,3 +122,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--current-highlight);
 }
+
+.group:hover .group-hover\:text-highlight {
+  color: var(--current-highlight);
+}

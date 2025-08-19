@@ -1,13 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navItems, Profile } from "./constants";
 import { NavItem } from "./types";
 import ProjectPreviews from "./components/ProjectPreviews";
 import ExperienceSection from "./components/ExperienceSection";
 import About from "./components/About";
-import Articles from "./components/Articles";
 import Socials from "./components/Socials";
+import PersonalProjectPreviews from "./components/PersonalProjectPreviews";
+import Articles from "./components/Articles";
+
+const sectionIds = navItems.map((item) => item.id);
 
 export default function PortfolioLayout() {
   const [selectedSection, setSelectedSection] = useState<string>("about");
@@ -22,14 +25,34 @@ export default function PortfolioLayout() {
       }
     }
   };
+  // Update selected section on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      let current = sectionIds[0];
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 120) {
+            current = id;
+          }
+        }
+      }
+      setSelectedSection(current);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleNavClick = (id: string) => {
     setSelectedSection(id);
     scrollToSection(id);
+    window.history.replaceState(null, "", id === "about" ? "/" : `#${id}`);
   };
 
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-center min-h-screen px-12 py-24 gap-24 lg:gap-4 bg-main text-primary max-w-screen-xl mx-auto relative">
+    <div className="flex flex-col lg:flex-row lg:justify-center min-h-screen px-4 py-8 lg:px-12 lg:py-24 gap-8 lg:gap-4 bg-main text-primary max-w-screen-xl mx-auto relative">
       {/* Sidebar */}
       <aside className="lg:w-1/2 flex flex-col justify-between lg:h-[calc(100vh-160px)] gap-10 lg:sticky lg:top-24">
         {/* Name & Title */}
@@ -47,10 +70,15 @@ export default function PortfolioLayout() {
           {/* Navigation Links */}
           <nav className="lg:flex-col gap-4 mt-10 hidden lg:flex">
             {navItems.map((item: NavItem) => (
-              <div
+              <a
                 key={item.id}
+                href={`#${item.id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(item.id);
+                }}
                 className="flex items-center gap-4 group cursor-pointer transition-all duration-300 ease-in-out"
-                onClick={() => handleNavClick(item.id)}
+                aria-current={selectedSection === item.id ? "page" : undefined}
               >
                 <div
                   className={`${
@@ -68,7 +96,7 @@ export default function PortfolioLayout() {
                 >
                   {item.label}
                 </span>
-              </div>
+              </a>
             ))}
           </nav>
         </div>
@@ -88,8 +116,11 @@ export default function PortfolioLayout() {
         {/* Projects Section */}
         <ProjectPreviews />
 
+        {/* Personal Projects Section */}
+        <PersonalProjectPreviews />
+
         {/* Articles Section */}
-        {/* <Articles /> */}
+        <Articles />
 
         {/* Footer */}
         <footer className="mt-auto pt-16">
