@@ -1,13 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navItems, Profile } from "./constants";
 import { NavItem } from "./types";
 import ProjectPreviews from "./components/ProjectPreviews";
 import ExperienceSection from "./components/ExperienceSection";
 import About from "./components/About";
-import Articles from "./components/Articles";
 import Socials from "./components/Socials";
+
+const sectionIds = navItems.map((item) => item.id);
 
 export default function PortfolioLayout() {
   const [selectedSection, setSelectedSection] = useState<string>("about");
@@ -22,10 +23,30 @@ export default function PortfolioLayout() {
       }
     }
   };
+  // Update selected section on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      let current = sectionIds[0];
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 60) {
+            current = id;
+          }
+        }
+      }
+      setSelectedSection(current);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleNavClick = (id: string) => {
     setSelectedSection(id);
     scrollToSection(id);
+    window.history.replaceState(null, "", id === "about" ? "/" : `#${id}`);
   };
 
   return (
@@ -47,10 +68,15 @@ export default function PortfolioLayout() {
           {/* Navigation Links */}
           <nav className="lg:flex-col gap-4 mt-10 hidden lg:flex">
             {navItems.map((item: NavItem) => (
-              <div
+              <a
                 key={item.id}
+                href={`#${item.id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(item.id);
+                }}
                 className="flex items-center gap-4 group cursor-pointer transition-all duration-300 ease-in-out"
-                onClick={() => handleNavClick(item.id)}
+                aria-current={selectedSection === item.id ? "page" : undefined}
               >
                 <div
                   className={`${
@@ -68,7 +94,7 @@ export default function PortfolioLayout() {
                 >
                   {item.label}
                 </span>
-              </div>
+              </a>
             ))}
           </nav>
         </div>
