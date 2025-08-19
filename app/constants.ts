@@ -273,6 +273,73 @@ export const projects = [
   },
 ];
 
+export const personalProjects = [
+  {
+    title: "Chari-ty",
+    date: "2025",
+    builtWith: ["NestJS", "Prisma", "React", "NextJS", "TypeScript"],
+    description:
+      "Chari-ty is a full-stack fundraising platform that connects donors and organizers through transparent and accessible charity campaigns. Built with a Node.js/Prisma backend and a React frontend, it supports secure authentication, campaign management, and seamless donation flows. The platform delivers a responsive, user-friendly experience while ensuring reliable API-driven communication between frontend and backend services.",
+    image: "/thumbnails/chari-ty.png",
+    video: "",
+    downloads: "",
+    bookmarked: "",
+    link: "https://chari-ty-frontend.vercel.app/",
+    company: {
+      name: "",
+      url: "",
+    },
+  },
+  {
+    title: "Gunpla Sekai",
+    date: "2025",
+    builtWith: [
+      "Next.js",
+      "React",
+      "Three.js",
+      "@google/model-viewer",
+      "Mantine",
+      "TypeScript",
+    ],
+    description:
+      "Gunpla Sekai is a Next.js application for exploring and interacting with 3D Gunpla (Gundam plastic model) designs. It integrates Three.js and Google’s Model Viewer to render models with real-time interaction, while Mantine provides a polished and responsive UI with notifications and tooltips. The platform delivers an engaging experience for hobbyists to view, customize, and showcase their Gunpla builds online.",
+    image: "",
+    video: "",
+    downloads: "",
+    bookmarked: "",
+    link: "",
+    company: {
+      name: "",
+      url: "",
+    },
+  },
+  {
+    title: "Custom Kickz",
+    date: "2025",
+    builtWith: [
+      "NestJS",
+      "Prisma",
+      "React",
+      "Vite",
+      "TypeScript",
+      "Three.js",
+      "Tailwind CSS",
+      "Clerk",
+      "OpenAI",
+    ],
+    description:
+      "Custom Kickz is a full-stack 3D sneaker customization platform where users can design and personalize sneakers in real time. The React + TypeScript frontend (with Three.js, Tailwind CSS, Clerk, and OpenAI integration) enables interactive editing, AI-driven color generation, and a responsive user experience. Backed by a NestJS/TypeScript backend with Prisma, the platform ensures scalable, reliable performance with full testing support for seamless sneaker design workflows.",
+    image: "",
+    video: "",
+    downloads: "",
+    bookmarked: "",
+    link: "",
+    company: {
+      name: "",
+      url: "",
+    },
+  },
+];
 export const Profile = {
   name: "Bret Axl Sebastian Pura",
   title: "Full Stack Developer",

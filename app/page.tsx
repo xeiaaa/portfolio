@@ -7,6 +7,7 @@ import ProjectPreviews from "./components/ProjectPreviews";
 import ExperienceSection from "./components/ExperienceSection";
 import About from "./components/About";
 import Socials from "./components/Socials";
+import PersonalProjectPreviews from "./components/PersonalProjectPreviews";
 
 const sectionIds = navItems.map((item) => item.id);
 
@@ -31,7 +32,7 @@ export default function PortfolioLayout() {
         const el = document.getElementById(id);
         if (el) {
           const rect = el.getBoundingClientRect();
-          if (rect.top <= 60) {
+          if (rect.top <= 120) {
             current = id;
           }
         }
@@ -113,6 +114,9 @@ export default function PortfolioLayout() {
 
         {/* Projects Section */}
         <ProjectPreviews />
+
+        {/* Personal Projects Section */}
+        <PersonalProjectPreviews />
 
         {/* Articles Section */}
         {/* <Articles /> */}

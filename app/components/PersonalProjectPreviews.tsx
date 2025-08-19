@@ -1,8 +1,7 @@
-import { projects } from "../constants";
+import { personalProjects } from "../constants";
 import { Project } from "../types";
 import PillBadge from "./PillBadge";
 import { Star, ArrowUpRight } from "lucide-react";
-import Link from "next/link";
 
 const renderProject = (project: Project) => {
   return (
@@ -77,36 +76,23 @@ const renderProject = (project: Project) => {
   );
 };
 
-const ProjectPreviews = () => {
+const PersonalProjectPreviews = () => {
   return (
-    <section id="professional-projects" className="flex flex-col gap-8">
+    <section id="personal-projects" className="flex flex-col gap-8">
       <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-accent/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
         <h2 className="text-sm font-bold uppercase tracking-widest text-secondary lg:sr-only">
-          Projects
+          Personal Projects
         </h2>
       </div>
       {/* PROJECT PREVIEWS */}
       <div className="group/list flex flex-col gap-16">
-        {projects
+        {personalProjects
           .sort((a, b) => parseInt(b.date) - parseInt(a.date))
           .slice(0, 5)
           .map((project) => renderProject(project))}
-      </div>
-
-      {/* View Full Project Archive Button */}
-      <div className="pt-8">
-        <Link
-          href="/projects"
-          className="inline-flex items-center gap-2 text-highlight hover:text-primary transition-all duration-300 ease-in-out group"
-        >
-          <span className="text-sm font-medium">View Full Project Archive</span>
-          <span className="text-highlight group-hover:translate-x-1 transition-all duration-300 ease-in-out">
-            →
-          </span>
-        </Link>
       </div>
     </section>
   );
 };
 
-export default ProjectPreviews;
+export default PersonalProjectPreviews;
