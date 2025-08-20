@@ -206,6 +206,22 @@ export const projects = [
     },
   },
   {
+    title: "Grapl",
+    date: "2021",
+    builtWith: ["React", "Node.js", "TypeScript", "Twilio", "Socket.io"],
+    description:
+      "A revolutionary command center for productivity and collaboration. Features persistent collaboration rooms, meeting recording/transcription, time travel capabilities, and marketplace integrations to help users recapture 40+ hours of productivity monthly.",
+    image: "",
+    video: "",
+    downloads: "",
+    bookmarked: "",
+    link: "",
+    company: {
+      name: "TAS Tradesoft",
+      url: "",
+    },
+  },
+  {
     title: "GaConnector",
     date: "2019",
     builtWith: ["React"],
