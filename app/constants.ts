@@ -288,7 +288,7 @@ export const personalProjects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    link: "https://chari-ty-frontend.vercel.app/",
+    link: "https://www.chari-ty.com/",
     company: {
       name: "",
       url: "",
@@ -311,7 +311,7 @@ export const personalProjects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    link: "",
+    link: "https://gunplasekai.com/customize",
     company: {
       name: "",
       url: "",
@@ -337,7 +337,7 @@ export const personalProjects = [
     video: "",
     downloads: "",
     bookmarked: "",
-    link: "",
+    link: "https://custom-kickz-seven.vercel.app/",
     company: {
       name: "",
       url: "",
