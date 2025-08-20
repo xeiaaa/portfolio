@@ -412,6 +412,13 @@ export const articles = [
       "https://cdn.hashnode.com/res/hashnode/image/upload/v1652865281197/iQ1lpEu-4.jpg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp",
   },
   {
+    title: "React Native - Anime App (Custom Screen Transitions)",
+    date: "2018",
+    link: "https://www.youtube.com/watch?v=EcPZiMWpUf0",
+    image:
+      "https://i.ytimg.com/vi/EcPZiMWpUf0/hqdefault.jpg?sqp=-oaymwFBCPYBEIoBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AG4BYACgAqKAgwIABABGEogUyhlMA8=&rs=AOn4CLB_ba3fd9pD3DfBIa8kv3ODMvlWNw",
+  },
+  {
     title: "React Native - Anime App (Anilist API)",
     date: "2018",
     link: "https://www.youtube.com/watch?v=VY1UadCrNys",
