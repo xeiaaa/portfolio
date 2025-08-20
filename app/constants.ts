@@ -417,7 +417,7 @@ export const Profile = {
     github: "https://github.com/xeiaaa",
     twitter: "https://x.com/deemid_",
     instagram: "https://www.instagram.com/bretaxlsebastian",
-    twitch: "https://www.twitch.tv/deeai_",
+    // twitch: "https://www.twitch.tv/deeai_",
     codepen: "https://codepen.io/xeiaaa",
   },
   email: "cosmicdevcs@gmail.com",

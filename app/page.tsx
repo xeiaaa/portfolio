@@ -130,9 +130,34 @@ export default function PortfolioLayout() {
         {/* Footer */}
         <footer className="mt-auto pt-16">
           <div className="text-sm text-secondary leading-relaxed">
-            Loosely designed in Figma and coded in Visual Studio Code by yours
-            truly. Built with Next.js and Tailwind CSS, deployed with Vercel.
-            Headings are set in Playfair Display; all other text uses Fira Code.
+            {" "}
+            <span>
+              Inspired by a{" "}
+              <a
+                href="https://brittanychiang.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-highlight hover:underline transition-all duration-300 ease-in-out"
+              >
+                portfolio
+              </a>{" "}
+              I admired. Rebuilt with Next.js & Tailwind CSS, deployed with
+              Vercel.
+            </span>
+            <Separator />
+            <div className="mt-4 text-xs text-muted italic text-center">
+              &ldquo;I look forward to tomorrow, but can I leave yesterday
+              behind?&rdquo;
+              <br />
+              <a
+                href="https://open.spotify.com/track/47FBi8vqUr5nH2j2QWD4RR"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-highlight hover:underline transition-all duration-300 ease-in-out"
+              >
+                Lightyears, Eraserheads
+              </a>
+            </div>
           </div>
         </footer>
       </main>
