@@ -66,7 +66,7 @@ const ExperienceSection = () => {
           download
           className="inline-flex items-center gap-2 text-highlight hover:text-primary transition-all duration-300 ease-in-out group"
         >
-          <span className="text-sm font-medium">View Full Resume</span>
+          <span className="text-sm font-medium">Download Resume</span>
           <span className="text-highlight group-hover:translate-x-1 transition-all duration-300 ease-in-out">
             →
           </span>
