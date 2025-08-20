@@ -3,6 +3,7 @@ import { Project } from "../types";
 import PillBadge from "./PillBadge";
 import { Star, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import SectionTitle from "./SectionTitle";
 
 const renderProject = (project: Project) => {
   return (
@@ -15,7 +16,7 @@ const renderProject = (project: Project) => {
     >
       <div
         key={project.title}
-        className="relative flex flex-col md:flex-row gap-4 group cursor-pointer p-3 rounded-xl bg-transparent shadow-none"
+        className="relative flex flex-col md:flex-row gap-4 group cursor-pointer rounded-xl bg-transparent shadow-none"
       >
         {/* Overlay only on desktop */}
         <div className="absolute hidden lg:block -inset-x-4 -inset-y-4 lg:-inset-x-6 lg:-inset-y-6 rounded-md transition opacity-0 group-hover:opacity-100 group-hover:bg-accent/50 group-hover:border group-hover:border-[#e6e9ec] group-hover:shadow-[0_2px_6px_rgba(2,12,27,0.1)] pointer-events-none"></div>
@@ -79,12 +80,8 @@ const renderProject = (project: Project) => {
 
 const ProjectPreviews = () => {
   return (
-    <section id="professional-projects" className="flex flex-col gap-8">
-      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-accent/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-secondary lg:sr-only">
-          Professional Projects
-        </h2>
-      </div>
+    <section id="professional-projects" className="flex flex-col">
+      <SectionTitle title="Professional Projects" />
       {/* PROJECT PREVIEWS */}
       <div className="group/list flex flex-col gap-16">
         {projects
@@ -94,7 +91,7 @@ const ProjectPreviews = () => {
       </div>
 
       {/* View Full Project Archive Button */}
-      <div className="pt-8">
+      <div className="">
         <Link
           href="/projects"
           className="inline-flex items-center gap-2 text-highlight hover:text-primary transition-all duration-300 ease-in-out group"

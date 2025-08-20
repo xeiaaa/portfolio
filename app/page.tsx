@@ -9,6 +9,7 @@ import About from "./components/About";
 import Socials from "./components/Socials";
 import PersonalProjectPreviews from "./components/PersonalProjectPreviews";
 import Articles from "./components/Articles";
+import Separator from "./components/Separator";
 
 const sectionIds = navItems.map((item) => item.id);
 
@@ -64,7 +65,7 @@ export default function PortfolioLayout() {
             {Profile.name}
           </h1>
           <p className="text-lg font-medium text-primary">{Profile.title}</p>
-          <p className="text-base text-secondary leading-relaxed max-w-xs">
+          <p className="text-base text-secondary leading-relaxed max-w-sm">
             {Profile.description}
           </p>
           {/* Navigation Links */}
@@ -106,18 +107,22 @@ export default function PortfolioLayout() {
       </aside>
 
       {/* Main Content */}
-      <main className="lg:w-1/2 flex flex-col gap-16">
+      <main className="lg:w-1/2 flex flex-col gap-4">
         {/* About Section */}
         <About />
+        <Separator />
 
         {/* Experience Section */}
         <ExperienceSection />
+        <Separator />
 
         {/* Projects Section */}
         <ProjectPreviews />
+        <Separator />
 
         {/* Personal Projects Section */}
         <PersonalProjectPreviews />
+        <Separator />
 
         {/* Articles Section */}
         <Articles />
@@ -127,7 +132,7 @@ export default function PortfolioLayout() {
           <div className="text-sm text-secondary leading-relaxed">
             Loosely designed in Figma and coded in Visual Studio Code by yours
             truly. Built with Next.js and Tailwind CSS, deployed with Vercel.
-            All text is set in the Inter typeface.
+            Headings are set in Playfair Display; all other text uses Fira Code.
           </div>
         </footer>
       </main>

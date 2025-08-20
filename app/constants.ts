@@ -15,6 +15,10 @@ export const navItems = [
     label: "Personal Projects",
     id: "personal-projects",
   },
+  {
+    label: "Articles & Videos",
+    id: "articles",
+  },
 ];
 
 export const experiences = [
@@ -26,7 +30,7 @@ export const experiences = [
       "Delivered multiple React + Node.js apps with consistent 5-star reviews. Designed MongoDB/PostgreSQL schemas, ensuring scalable data handling. Maintained 100% job success score through quality delivery.",
     company: {
       name: "Upwork",
-      url: "https://www.upwork.com",
+      url: "https://www.upwork.com/freelancers/~0159a6cd3b12f81989",
     },
   },
   {
@@ -382,6 +386,8 @@ export const Profile = {
     github: "https://github.com/xeiaaa",
     twitter: "https://x.com/deemid_",
     instagram: "https://www.instagram.com/bretaxlsebastian",
+    twitch: "https://www.twitch.tv/deeai_",
+    codepen: "https://codepen.io/xeiaaa",
   },
   email: "cosmicdevcs@gmail.com",
   phone: "+63 995 753 6000",
@@ -391,21 +397,25 @@ export const Profile = {
 
 export const articles = [
   {
-    title: "5 Common Accessibility Pitfalls and How to Avoid Them",
-    date: "2024",
-    link: "https://medium.com",
-    image: "",
+    title: "Nike By You Clone - Timelapse",
+    date: "2023",
+    link: "https://youtu.be/ReLVAtBcQso",
+    image:
+      "https://i9.ytimg.com/vi_webp/ReLVAtBcQso/mqdefault.webp?v=6413acab&sqp=CKSUlMUG&rs=AOn4CLCu0IoKPX87OXfumYa_pOVb0DNXlg",
+  },
+
+  {
+    title: "Uploading files to AWS S3 Directly (NodeJS & React)",
+    date: "2022",
+    link: "https://bretaxlsebastian.hashnode.dev/uploading-files-to-aws-s3-directly-nodejs-and-react#heading-create-aws-user",
+    image:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1652865281197/iQ1lpEu-4.jpg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp",
   },
   {
-    title: "Integrating Algolia Search with WordPress Multisite",
-    date: "2020",
-    link: "https://medium.com",
-    image: "",
-  },
-  {
-    title: "Building a Headless Mobile App CMS From Scratch",
-    date: "2019",
-    link: "https://medium.com",
-    image: "",
+    title: "React Native - Anime App (Anilist API)",
+    date: "2018",
+    link: "https://www.youtube.com/watch?v=VY1UadCrNys",
+    image:
+      "https://i.ytimg.com/an_webp/VY1UadCrNys/mqdefault_6s.webp?du=3000&sqp=CPiGlMUG&rs=AOn4CLA0778glE8hjVG0N-NGp7TROv5ZLg",
   },
 ];

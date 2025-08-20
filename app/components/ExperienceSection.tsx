@@ -2,6 +2,7 @@ import { experiences } from "../constants";
 import { Experience } from "../types";
 import PillBadge from "./PillBadge";
 import { ArrowUpRight } from "lucide-react";
+import SectionTitle from "./SectionTitle";
 
 const renderExperience = (experience: Experience) => {
   return (
@@ -51,19 +52,15 @@ const renderExperience = (experience: Experience) => {
 const ExperienceSection = () => {
   return (
     <section id="experience">
-      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-accent/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-secondary lg:sr-only">
-          Experience
-        </h2>
-      </div>
+      <SectionTitle title="Experience" />
+
       <ul className="group/list flex flex-col gap-4">
         {experiences.map((experience: Experience) =>
           renderExperience(experience)
         )}
       </ul>
 
-      {/* View Full Project Archive Button */}
-      <div className="pt-8">
+      <div className="">
         <a
           href="/bret-axl-sebastian-pura-resume.pdf"
           download

@@ -8,6 +8,7 @@ import {
   Youtube,
   Facebook,
   Instagram,
+  Codepen,
 } from "lucide-react";
 
 const socialIcons = {
@@ -17,6 +18,7 @@ const socialIcons = {
   instagram: <Instagram className="w-4.5 h-4.5" />,
   facebook: <Facebook className="w-4.5 h-4.5" />,
   youtube: <Youtube className="w-4.5 h-4.5" />,
+  codepen: <Codepen className="w-4.5 h-4.5" />,
   twitch: <Twitch className="w-4.5 h-4.5" />,
 };
 
@@ -27,6 +29,7 @@ const Socials = () => {
         <Link
           href={value || "#"}
           key={key}
+          target="_blank"
           className="p-2 border border-[#5f6368] rounded-full opacity-50 hover:opacity-100 hover:shadow-[0px_4px_4px_rgba(2,12,27,0.7)] hover:bg-[#4db5c2] hover:text-white hover:border-transparent transition-all duration-400 ease-in-out cursor-pointer group"
         >
           {socialIcons[key as keyof typeof socialIcons]}

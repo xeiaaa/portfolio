@@ -1,4 +1,5 @@
 import { Profile } from "../constants";
+import SectionTitle from "./SectionTitle";
 
 interface AboutParagraph {
   paragraph: string;
@@ -47,18 +48,16 @@ const About = () => {
       );
     });
 
-    return <p className="mb-4" dangerouslySetInnerHTML={{ __html: text }} />;
+    return (
+      <p className="text-justify" dangerouslySetInnerHTML={{ __html: text }} />
+    );
   };
 
   return (
     <section id="about">
-      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-accent/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-secondary lg:sr-only">
-          About
-        </h2>
-      </div>
+      <SectionTitle title="About" />
       <div className="flex flex-col gap-6">
-        <div className="text-muted leading-relaxed">
+        <div className="text-muted leading-relaxed flex flex-col gap-4">
           {Profile.about.map((paragraph: AboutParagraph, index: number) => (
             <div key={index}>{renderParagraph(paragraph)}</div>
           ))}
