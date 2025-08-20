@@ -30,7 +30,7 @@ const Socials = () => {
           href={value || "#"}
           key={key}
           target="_blank"
-          className="p-2 border border-[#5f6368] rounded-full opacity-50 hover:opacity-100 hover:shadow-[0px_4px_4px_rgba(2,12,27,0.7)] hover:bg-[#4db5c2] hover:text-white hover:border-transparent transition-all duration-400 ease-in-out cursor-pointer group"
+          className="p-2 border border-[#5f6368] rounded-full opacity-50 hover:opacity-100 hover:shadow-[0_2px_6px_rgba(2,12,27,0.1)] hover:bg-[#4db5c2] hover:text-white hover:border-transparent transition-all duration-400 ease-in-out cursor-pointer group"
         >
           {socialIcons[key as keyof typeof socialIcons]}
         </Link>
