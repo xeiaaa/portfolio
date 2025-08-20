@@ -91,7 +91,7 @@ const ProjectPreviews = () => {
       </div>
 
       {/* View Full Project Archive Button */}
-      <div className="">
+      <div className="mt-8">
         <Link
           href="/projects"
           className="inline-flex items-center gap-2 text-highlight hover:text-primary transition-all duration-300 ease-in-out group"
