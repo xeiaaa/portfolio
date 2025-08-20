@@ -79,7 +79,7 @@ const renderProject = (project: Project) => {
 
 const PersonalProjectPreviews = () => {
   return (
-    <section id="personal-projects" className="flex flex-col">
+    <section id="personal-projects" className="flex flex-col scroll-mt-11">
       <SectionTitle title="Personal Projects" />
 
       {/* PROJECT PREVIEWS */}
