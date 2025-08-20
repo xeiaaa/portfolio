@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 import { projects } from "../constants";
 
@@ -123,7 +123,7 @@ export default function ProjectsPage() {
           </thead>
           <tbody>
             {projectsData.map((project, index) => (
-              <>
+              <Fragment key={index.toString()}>
                 <tr
                   key={index}
                   className="border-b border-primary hover:bg-accent transition-all duration-300 ease-in-out group cursor-pointer"
@@ -182,7 +182,7 @@ export default function ProjectsPage() {
                     </td>
                   </tr>
                 )}
-              </>
+              </Fragment>
             ))}
           </tbody>
         </table>

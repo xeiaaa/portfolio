@@ -88,7 +88,14 @@ export const projects = [
   {
     title: "ChatBuildX — AI Chatbot Builder",
     date: "2024",
-    builtWith: ["NestJS", "React", "MongoDB", "OpenAI", "TypeScript"],
+    builtWith: [
+      "NestJS",
+      "React",
+      "MongoDB",
+      "OpenAI",
+      "TypeScript",
+      "Pinecone",
+    ],
     description:
       "Built from scratch for scalability. Integrated WordPress, WooCommerce, Facebook Messenger, and Google Drive for contextual data. Developed a custom web scraping utility for dynamic knowledge enrichment.",
     image: "/thumbnails/chatbuildx.png",
@@ -104,7 +111,7 @@ export const projects = [
   {
     title: "CSV Analyser — Trading Data Validator",
     date: "2023",
-    builtWith: ["React", "TypeScript", "Node.js", "react-window"],
+    builtWith: ["React", "TypeScript"],
     description:
       "Implemented FIFO vs. LIFO strategy comparison for share balance validation and parcel-level error detection (trade date, price range, dishonesty). Built virtualization for 100K+ rows to ensure smooth dataset interaction.",
     image: "/thumbnails/csv-analyser-placeholder.jpg",
@@ -136,15 +143,7 @@ export const projects = [
   {
     title: "ANZ MTG Super Series — Event Management Platform",
     date: "2021",
-    builtWith: [
-      "NestJS",
-      "MongoDB",
-      "React",
-      "Vite",
-      "Next.js",
-      "PayPal",
-      "AWS",
-    ],
+    builtWith: ["NestJS", "MongoDB", "React", "Next.js", "AWS"],
     description:
       "Designed backend with NestJS and MongoDB, with automated testing for reliability. Built admin dashboard (React + Vite) and participant app (Next.js). Integrated PayPal for secure payments and managed AWS deployment.",
     link: "https://anzmtg.com.au",
@@ -169,7 +168,7 @@ export const projects = [
     downloads: "",
     bookmarked: "",
     company: {
-      name: "",
+      name: "Upwork",
       url: "",
     },
   },
@@ -185,7 +184,7 @@ export const projects = [
     downloads: "",
     bookmarked: "",
     company: {
-      name: "",
+      name: "Upwork",
       url: "",
     },
   },
@@ -201,7 +200,7 @@ export const projects = [
     downloads: "",
     bookmarked: "",
     company: {
-      name: "",
+      name: "Upwork",
       url: "",
     },
   },
@@ -237,6 +236,22 @@ export const projects = [
     },
   },
   {
+    title: "K-Drama Scraper — Web Scraping Tool",
+    date: "2017",
+    builtWith: ["MongoDB", "Node.js", "Nightmare.js"],
+    description:
+      "Developed a scraper for multiple K-drama series and movie websites. The tool automatically collected links, thumbnails, descriptions, and other relevant information, storing it in a MongoDB database for structured access and later use.",
+    link: "",
+    image: "",
+    video: "",
+    downloads: "",
+    bookmarked: "",
+    company: {
+      name: "Teleempire",
+      url: "",
+    },
+  },
+  {
     title: "Korean In-House Casino App",
     date: "2017",
     builtWith: [
@@ -255,7 +270,7 @@ export const projects = [
     downloads: "",
     bookmarked: "",
     company: {
-      name: "",
+      name: "Teleempire",
       url: "",
     },
   },
@@ -297,7 +312,16 @@ export const personalProjects = [
   {
     title: "Chari-ty",
     date: "2025",
-    builtWith: ["NestJS", "Prisma", "React", "NextJS", "TypeScript"],
+    builtWith: [
+      "NestJS",
+      "Prisma",
+      "React",
+      "NextJS",
+      "TypeScript",
+      "Stripe",
+      "Clerk",
+      "Cloudinary",
+    ],
     description:
       "A fundraising platform that connects donors and organizers through transparent charity campaigns. Features secure authentication, campaign management, and seamless donation flows.",
     image: "/thumbnails/chari-ty.png",
@@ -313,17 +337,10 @@ export const personalProjects = [
   {
     title: "Gunpla Sekai",
     date: "2025",
-    builtWith: [
-      "Next.js",
-      "React",
-      "Three.js",
-      "@google/model-viewer",
-      "Mantine",
-      "TypeScript",
-    ],
+    builtWith: ["Next.js", "React", "Model Viewer", "TypeScript"],
     description:
       "A platform for exploring and interacting with 3D Gunpla (Gundam plastic model) designs. Features real-time 3D model rendering and customization tools for hobbyists to showcase their builds.",
-    image: "",
+    image: "/thumbnails/gunpla-sekai.png",
     video: "",
     downloads: "",
     bookmarked: "",
@@ -340,16 +357,14 @@ export const personalProjects = [
       "NestJS",
       "Prisma",
       "React",
-      "Vite",
-      "TypeScript",
-      "Three.js",
-      "Tailwind CSS",
+      "Model Viewer",
       "Clerk",
       "OpenAI",
+      "GSAP",
     ],
     description:
       "A 3D sneaker customization platform where users can design and personalize sneakers in real time. Features interactive editing, AI-driven color generation, and seamless design workflows.",
-    image: "",
+    image: "/thumbnails/custom-kickz.png",
     video: "",
     downloads: "",
     bookmarked: "",
@@ -384,8 +399,8 @@ export const Profile = {
     },
     {
       paragraph:
-        "Beyond shipping robust applications, I'm passionate about continuous learning and pushing the boundaries of user experience. Lately, I've been exploring Three.js and GSAP, experimenting with animation and 3D interactivity to bring richer, more engaging interfaces to the web.",
-      highlights: ["Three.js", "GSAP"],
+        "Beyond shipping robust applications, I'm passionate about continuous learning and pushing the boundaries of user experience. Recently, I've been diving into AI-assisted development, where I've noticed that projects I initially estimated would take two months (working only in my free time) were finished in just a week with the help of AI. I've been reviewing AI-generated code as part of this process, which has accelerated my learning and sharpened my ability to spot optimizations and best practices. I've also been exploring Three.js and GSAP, experimenting with animation and 3D interactivity to bring richer, more engaging interfaces to the web.",
+      highlights: ["AI-assisted development", "Three.js", "GSAP"],
       bold: [],
       italic: [],
     },
@@ -416,8 +431,7 @@ export const articles = [
     title: "Nike By You Clone - Timelapse",
     date: "2023",
     link: "https://youtu.be/ReLVAtBcQso",
-    image:
-      "https://i9.ytimg.com/vi_webp/ReLVAtBcQso/mqdefault.webp?v=6413acab&sqp=CKSUlMUG&rs=AOn4CLCu0IoKPX87OXfumYa_pOVb0DNXlg",
+    image: "/thumbnails/nike-by-you-clone.webp",
   },
 
   {
@@ -431,14 +445,12 @@ export const articles = [
     title: "React Native - Anime App (Custom Screen Transitions)",
     date: "2018",
     link: "https://www.youtube.com/watch?v=EcPZiMWpUf0",
-    image:
-      "https://i.ytimg.com/vi/EcPZiMWpUf0/hqdefault.jpg?sqp=-oaymwFBCPYBEIoBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AG4BYACgAqKAgwIABABGEogUyhlMA8=&rs=AOn4CLB_ba3fd9pD3DfBIa8kv3ODMvlWNw",
+    image: "/thumbnails/anilist-2.jpg",
   },
   {
     title: "React Native - Anime App (Anilist API)",
     date: "2018",
     link: "https://www.youtube.com/watch?v=VY1UadCrNys",
-    image:
-      "https://i.ytimg.com/an_webp/VY1UadCrNys/mqdefault_6s.webp?du=3000&sqp=CPiGlMUG&rs=AOn4CLA0778glE8hjVG0N-NGp7TROv5ZLg",
+    image: "/thumbnails/anilist.jpg",
   },
 ];
