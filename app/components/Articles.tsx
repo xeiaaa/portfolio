@@ -3,7 +3,7 @@ import SectionTitle from "./SectionTitle";
 
 const Articles = () => {
   return (
-    <section id="articles" className="flex flex-col">
+    <section id="articles" className="flex flex-col scroll-mt-11">
       <SectionTitle title="Articles & Videos" />
 
       <div className="group/list flex flex-col gap-16">

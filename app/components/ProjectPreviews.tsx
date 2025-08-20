@@ -80,7 +80,7 @@ const renderProject = (project: Project) => {
 
 const ProjectPreviews = () => {
   return (
-    <section id="professional-projects" className="flex flex-col">
+    <section id="professional-projects" className="flex flex-col scroll-mt-11">
       <SectionTitle title="Professional Projects" />
       {/* PROJECT PREVIEWS */}
       <div className="group/list flex flex-col gap-16">

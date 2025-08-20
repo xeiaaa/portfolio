@@ -51,7 +51,7 @@ const renderExperience = (experience: Experience) => {
 
 const ExperienceSection = () => {
   return (
-    <section id="experience">
+    <section id="experience" className="scroll-mt-11">
       <SectionTitle title="Experience" />
 
       <ul className="group/list flex flex-col gap-4">
