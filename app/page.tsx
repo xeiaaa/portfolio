@@ -10,6 +10,7 @@ import Socials from "./components/Socials";
 import PersonalProjectPreviews from "./components/PersonalProjectPreviews";
 import Articles from "./components/Articles";
 import Separator from "./components/Separator";
+import StructuredData from "./components/StructuredData";
 
 const sectionIds = navItems.map((item) => item.id);
 
@@ -53,114 +54,122 @@ export default function PortfolioLayout() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-center min-h-screen px-4 py-8 lg:px-12 lg:py-24 gap-8 lg:gap-4 bg-main text-primary max-w-screen-xl mx-auto relative">
-      {/* Sidebar */}
-      <aside className="lg:w-1/2 flex flex-col justify-between lg:h-[calc(100vh-160px)] gap-10 lg:sticky lg:top-24">
-        {/* Name & Title */}
-        <div className="flex flex-col gap-2">
-          <h1
-            className="text-5xl font-bold text-primary tracking-wide leading-loose max-w-[18ch]"
-            style={{ lineHeight: "1.2" }}
-          >
-            {Profile.name}
-          </h1>
-          <p className="text-lg font-medium text-primary">{Profile.title}</p>
-          <p className="text-base text-secondary leading-relaxed max-w-sm">
-            {Profile.description}
-          </p>
-          {/* Navigation Links */}
-          <nav className="lg:flex-col gap-4 mt-10 hidden lg:flex">
-            {navItems.map((item: NavItem) => (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(item.id);
-                }}
-                className="flex items-center gap-4 group cursor-pointer transition-all duration-300 ease-in-out"
-                aria-current={selectedSection === item.id ? "page" : undefined}
-              >
-                <div
-                  className={`${
-                    selectedSection === item.id
-                      ? "bg-highlight w-16"
-                      : "bg-muted w-8"
-                  } h-0.5 transition-all duration-300 ease-in-out rounded-full`}
-                ></div>
-                <span
-                  className={`${
-                    selectedSection === item.id
-                      ? "text-primary text-highlight"
-                      : "text-muted"
-                  } text-xs font-bold uppercase tracking-widest group-hover:text-highlight transition-all duration-300 ease-in-out`}
+    <>
+      <StructuredData />
+      <div className="flex flex-col lg:flex-row lg:justify-center min-h-screen px-4 py-8 lg:px-12 lg:py-24 gap-8 lg:gap-4 bg-main text-primary max-w-screen-xl mx-auto relative">
+        {/* Sidebar */}
+        <aside className="lg:w-1/2 flex flex-col justify-between lg:h-[calc(100vh-160px)] gap-10 lg:sticky lg:top-24">
+          {/* Name & Title */}
+          <header className="flex flex-col gap-2">
+            <h1
+              className="text-5xl font-bold text-primary tracking-wide leading-loose max-w-[18ch]"
+              style={{ lineHeight: "1.2" }}
+            >
+              {Profile.name}
+            </h1>
+            <p className="text-lg font-medium text-primary">{Profile.title}</p>
+            <p className="text-base text-secondary leading-relaxed max-w-sm">
+              {Profile.description}
+            </p>
+            {/* Navigation Links */}
+            <nav
+              className="lg:flex-col gap-4 mt-10 hidden lg:flex"
+              aria-label="Main navigation"
+            >
+              {navItems.map((item: NavItem) => (
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(item.id);
+                  }}
+                  className="flex items-center gap-4 group cursor-pointer transition-all duration-300 ease-in-out"
+                  aria-current={
+                    selectedSection === item.id ? "page" : undefined
+                  }
                 >
-                  {item.label}
-                </span>
-              </a>
-            ))}
-          </nav>
-        </div>
+                  <div
+                    className={`${
+                      selectedSection === item.id
+                        ? "bg-highlight w-16"
+                        : "bg-muted w-8"
+                    } h-0.5 transition-all duration-300 ease-in-out rounded-full`}
+                  ></div>
+                  <span
+                    className={`${
+                      selectedSection === item.id
+                        ? "text-primary text-highlight"
+                        : "text-muted"
+                    } text-xs font-bold uppercase tracking-widest group-hover:text-highlight transition-all duration-300 ease-in-out`}
+                  >
+                    {item.label}
+                  </span>
+                </a>
+              ))}
+            </nav>
+          </header>
 
-        {/* Social Icons */}
-        <Socials />
-      </aside>
+          {/* Social Icons */}
+          <Socials />
+        </aside>
 
-      {/* Main Content */}
-      <main className="lg:w-1/2 flex flex-col gap-4">
-        {/* About Section */}
-        <About />
-        <Separator />
+        {/* Main Content */}
+        <main className="lg:w-1/2 flex flex-col gap-4">
+          {/* About Section */}
+          <About />
+          <Separator />
 
-        {/* Experience Section */}
-        <ExperienceSection />
-        <Separator />
+          {/* Experience Section */}
+          <ExperienceSection />
+          <Separator />
 
-        {/* Projects Section */}
-        <ProjectPreviews />
-        <Separator />
+          {/* Projects Section */}
+          <ProjectPreviews />
+          <Separator />
 
-        {/* Personal Projects Section */}
-        <PersonalProjectPreviews />
-        <Separator />
+          {/* Personal Projects Section */}
+          <PersonalProjectPreviews />
+          <Separator />
 
-        {/* Articles Section */}
-        <Articles />
+          {/* Articles Section */}
+          <Articles />
 
-        {/* Footer */}
-        <footer className="mt-auto pt-16">
-          <div className="text-sm text-secondary leading-relaxed">
-            {" "}
-            <span>
-              Inspired by a{" "}
-              <a
-                href="https://brittanychiang.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-highlight hover:underline transition-all duration-300 ease-in-out"
-              >
-                portfolio
-              </a>{" "}
-              I admired. Rebuilt with Next.js & Tailwind CSS, deployed with
-              Vercel.
-            </span>
-            <Separator />
-            <div className="mt-4 text-xs text-muted italic text-center">
-              &ldquo;I look forward to tomorrow, but can I leave yesterday
-              behind?&rdquo;
-              <br />
-              <a
-                href="https://open.spotify.com/track/47FBi8vqUr5nH2j2QWD4RR"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-highlight hover:underline transition-all duration-300 ease-in-out"
-              >
-                Lightyears, Eraserheads
-              </a>
+          {/* Footer */}
+          <footer className="mt-auto pt-16">
+            <div className="text-sm text-secondary leading-relaxed">
+              {" "}
+              <span>
+                Inspired by a{" "}
+                <a
+                  href="https://brittanychiang.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-highlight hover:underline transition-all duration-300 ease-in-out"
+                >
+                  portfolio
+                </a>{" "}
+                I admired. Rebuilt with Next.js & Tailwind CSS, deployed with
+                Vercel.
+              </span>
+              <Separator />
+              <div className="mt-4 text-xs text-muted italic text-center">
+                &ldquo;I look forward to tomorrow, but can I leave yesterday
+                behind?&rdquo;
+                <br />
+                <a
+                  href="https://open.spotify.com/track/47FBi8vqUr5nH2j2QWD4RR"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-highlight hover:underline transition-all duration-300 ease-in-out"
+                >
+                  Lightyears, Eraserheads
+                </a>
+              </div>
             </div>
-          </div>
-        </footer>
-      </main>
-    </div>
+          </footer>
+        </main>
+      </div>
+    </>
   );
 }

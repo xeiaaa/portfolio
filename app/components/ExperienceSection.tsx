@@ -65,6 +65,7 @@ const ExperienceSection = () => {
           href="/bret-axl-sebastian-pura-resume.pdf"
           download
           className="inline-flex items-center gap-2 text-highlight hover:text-primary transition-all duration-300 ease-in-out group"
+          aria-label="Download Bret Axl Sebastian Pura's resume"
         >
           <span className="text-sm font-medium">Download Resume</span>
           <span className="text-highlight group-hover:translate-x-1 transition-all duration-300 ease-in-out">
@@ -72,6 +73,33 @@ const ExperienceSection = () => {
           </span>
         </a>
       </div>
+
+      {/* Structured data for work experience */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Bret Axl Sebastian Pura",
+            jobTitle: "Full Stack Developer",
+            hasOccupation: experiences.map((exp) => ({
+              "@type": "Occupation",
+              name: exp.title,
+              description: exp.description,
+              skills: exp.skills,
+              dateOccupied: exp.date,
+              worksFor: exp.company?.name
+                ? {
+                    "@type": "Organization",
+                    name: exp.company.name,
+                    url: exp.company.url,
+                  }
+                : undefined,
+            })),
+          }),
+        }}
+      />
     </section>
   );
 };

@@ -29,3 +29,10 @@ export interface NavItem {
   label: string;
   id: string;
 }
+
+export interface AboutParagraph {
+  paragraph: string;
+  highlights: string[];
+  bold: string[];
+  italic: string[];
+}
