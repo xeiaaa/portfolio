@@ -3,35 +3,59 @@ import { AboutParagraph } from "../types";
 import SectionTitle from "./SectionTitle";
 
 const About = () => {
+  const renderParagraph = (paragraph: AboutParagraph) => {
+    let text = paragraph.paragraph;
+
+    // Apply formatting in order: italic -> bold -> highlights
+    // This ensures proper nesting of styles
+
+    // Apply italic formatting
+    paragraph.italic.forEach((word) => {
+      const regex = new RegExp(`\\b(${word})\\b`, "gi");
+      text = text.replace(regex, '<em class="italic">$1</em>');
+    });
+
+    // Apply bold formatting
+    paragraph.bold.forEach((word) => {
+      const regex = new RegExp(`\\b(${word})\\b`, "gi");
+      text = text.replace(regex, '<strong class="font-bold">$1</strong>');
+    });
+
+    // Apply highlight formatting (should be applied last to override other styles)
+    paragraph.highlights.forEach((highlight) => {
+      // Escape special regex characters in the highlight word
+      const escapedHighlight = highlight.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+      // If the highlight word contains apostrophe or hyphen, match it exactly
+      // Otherwise, use word boundaries to avoid matching words with apostrophes/hyphens
+      let regex;
+      if (highlight.includes("'") || highlight.includes("-")) {
+        regex = new RegExp(`\\b(${escapedHighlight})\\b`, "gi");
+      } else {
+        // For words without apostrophes/hyphens, exclude matches that have them
+        regex = new RegExp(`\\b(${escapedHighlight})(?!['-])\\b`, "gi");
+      }
+
+      text = text.replace(
+        regex,
+        '<span class="text-highlight font-medium">$1</span>'
+      );
+    });
+
+    return (
+      <p
+        className="text-sm leading-relaxed text-secondary text-justify"
+        dangerouslySetInnerHTML={{ __html: text }}
+      />
+    );
+  };
+
   return (
     <section id="about" className="scroll-mt-11">
       <SectionTitle title="About" />
       <div className="space-y-4">
         {Profile.about.map((paragraph: AboutParagraph, index) => (
-          <p key={index} className="text-sm leading-relaxed text-secondary">
-            {paragraph.paragraph.split(" ").map((word, wordIndex) => {
-              const isHighlighted = paragraph.highlights.some((highlight) =>
-                word.toLowerCase().includes(highlight.toLowerCase())
-              );
-              const isBold = paragraph.bold.some((bold) =>
-                word.toLowerCase().includes(bold.toLowerCase())
-              );
-              const isItalic = paragraph.italic.some((italic) =>
-                word.toLowerCase().includes(italic.toLowerCase())
-              );
-
-              let className = "";
-              if (isHighlighted) className += "text-highlight ";
-              if (isBold) className += "font-bold ";
-              if (isItalic) className += "italic ";
-
-              return (
-                <span key={wordIndex} className={className}>
-                  {word}{" "}
-                </span>
-              );
-            })}
-          </p>
+          <div key={index}>{renderParagraph(paragraph)}</div>
         ))}
       </div>
 
