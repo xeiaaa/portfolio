@@ -109,19 +109,19 @@ export const projects = [
     },
   },
   {
-    title: "CSV Analyser — Trading Data Validator",
+    title: "Syllaby.io - AI-Powered Content Creation Platform",
     date: "2023",
     builtWith: ["React", "TypeScript"],
     description:
-      "Implemented FIFO vs. LIFO strategy comparison for share balance validation and parcel-level error detection (trade date, price range, dishonesty). Built virtualization for 100K+ rows to ensure smooth dataset interaction.",
-    image: "/thumbnails/csv-analyser-placeholder.jpg",
+      "Worked on key features including faceless video creation, avatar video creation, and the main user dashboard.",
+    image: "/thumbnails/syllaby.png",
     video: "",
     downloads: "",
     bookmarked: "",
-    link: "",
+    link: "https://syllaby.io/",
     company: {
-      name: "Sonority Pty Ltd",
-      url: "",
+      name: "Syllaby",
+      url: "https://syllaby.io/",
     },
   },
   {
@@ -154,6 +154,22 @@ export const projects = [
     company: {
       name: "Upwork",
       url: "https://www.upwork.com",
+    },
+  },
+  {
+    title: "CSV Analyser — Trading Data Validator",
+    date: "2023",
+    builtWith: ["React", "TypeScript"],
+    description:
+      "Implemented FIFO vs. LIFO strategy comparison for share balance validation and parcel-level error detection (trade date, price range, dishonesty). Built virtualization for 100K+ rows to ensure smooth dataset interaction.",
+    image: "/thumbnails/csv-analyser-placeholder.jpg",
+    video: "",
+    downloads: "",
+    bookmarked: "",
+    link: "",
+    company: {
+      name: "Sonority Pty Ltd",
+      url: "",
     },
   },
   {

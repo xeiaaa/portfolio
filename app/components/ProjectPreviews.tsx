@@ -86,7 +86,7 @@ const ProjectPreviews = () => {
       <div className="group/list flex flex-col gap-16">
         {projects
           .sort((a, b) => parseInt(b.date) - parseInt(a.date))
-          .slice(0, 5)
+          .slice(0, 6)
           .map((project) => renderProject(project))}
       </div>
 
