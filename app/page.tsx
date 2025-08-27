@@ -158,7 +158,7 @@ export default function PortfolioLayout() {
                 behind?&rdquo;
                 <br />
                 <a
-                  href="https://open.spotify.com/track/47FBi8vqUr5nH2j2QWD4RR"
+                  href="https://www.youtube.com/watch?v=JbUJq552RqA&ab_channel=Eraserheads-Topic"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-highlight hover:underline transition-all duration-300 ease-in-out"
