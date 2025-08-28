@@ -19,6 +19,7 @@ export interface Project {
   downloads: string;
   bookmarked: string;
   builtWith: string[];
+  demoLink?: string;
   company: {
     url: string;
     name: string;

@@ -1,7 +1,7 @@
 import { personalProjects } from "../constants";
 import { Project } from "../types";
 import PillBadge from "./PillBadge";
-import { Star, ArrowUpRight } from "lucide-react";
+import { Star, ArrowUpRight, Link } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 
 const renderProject = (project: Project) => {
@@ -47,6 +47,21 @@ const renderProject = (project: Project) => {
             {project.description}
           </p>
           <div className="flex flex-col mt-2 gap-2">
+            {/* Related Links Section */}
+            {project.demoLink && (
+              <div className="flex flex-wrap items-center gap-4">
+                <a
+                  href={project.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-highlight flex items-center gap-1 hover:underline"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <Link className="w-3 h-3" />
+                  Youtube Demo
+                </a>
+              </div>
+            )}
             <div className="flex flex-wrap items-center gap-4">
               {project.bookmarked && (
                 <span className="text-sm text-highlight flex items-center gap-1">

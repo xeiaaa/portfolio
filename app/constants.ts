@@ -365,6 +365,7 @@ export const personalProjects = [
     downloads: "",
     bookmarked: "",
     link: "https://gunplasekai.com/customize",
+    demoLink: "https://youtu.be/c0t6mm4dGpI?si=9X6-IziscScckVyf",
     company: {
       name: "",
       url: "",
@@ -389,6 +390,7 @@ export const personalProjects = [
     downloads: "",
     bookmarked: "",
     link: "https://custom-kickz-seven.vercel.app/",
+    demoLink: "https://youtu.be/TbbWOujHskw?si=02mo8-qy4Ok8ciah",
     company: {
       name: "",
       url: "",
