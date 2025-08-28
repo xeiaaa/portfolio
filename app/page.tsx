@@ -69,7 +69,7 @@ export default function PortfolioLayout() {
   return (
     <>
       <StructuredData />
-      <div className="flex flex-col lg:flex-row lg:justify-center min-h-screen px-4 py-8 lg:px-12 lg:py-24 gap-8 lg:gap-4 bg-main text-primary max-w-screen-xl mx-auto relative">
+      <div className="flex flex-col lg:flex-row lg:justify-center min-h-screen px-4 sm:px-6 py-6 sm:py-8 lg:px-12 lg:py-24 gap-6 sm:gap-8 lg:gap-4 bg-main text-primary max-w-screen-xl mx-auto relative">
         {/* Sidebar */}
         <aside className="lg:w-1/2 flex flex-col justify-between lg:h-[calc(100vh-160px)] gap-10 lg:sticky lg:top-24">
           {/* Name & Title */}
@@ -128,7 +128,7 @@ export default function PortfolioLayout() {
         </aside>
 
         {/* Main Content */}
-        <main className="lg:w-1/2 flex flex-col gap-4">
+        <main className="lg:w-1/2 flex flex-col gap-6 sm:gap-4">
           {/* About Section */}
           <About />
           <Separator />
