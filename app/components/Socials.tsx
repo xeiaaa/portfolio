@@ -24,7 +24,7 @@ const socialIcons = {
 
 const Socials = () => {
   return (
-    <div className="flex gap-3">
+    <div className="flex gap-3 justify-center lg:justify-start">
       {Object.entries(Profile.social).map(([key, value]) => (
         <Link
           href={value || "#"}

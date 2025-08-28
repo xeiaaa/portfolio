@@ -19,6 +19,10 @@ export const navItems = [
     label: "Articles & Videos",
     id: "articles",
   },
+  {
+    label: "Contact",
+    id: "contact",
+  },
 ];
 
 export const experiences = [

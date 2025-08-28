@@ -9,6 +9,7 @@ import About from "./components/About";
 import Socials from "./components/Socials";
 import PersonalProjectPreviews from "./components/PersonalProjectPreviews";
 import Articles from "./components/Articles";
+import ContactForm from "./components/ContactForm";
 import Separator from "./components/Separator";
 import StructuredData from "./components/StructuredData";
 
@@ -30,6 +31,18 @@ export default function PortfolioLayout() {
   // Update selected section on scroll
   useEffect(() => {
     const handleScroll = () => {
+      const scrollPosition = window.scrollY + 120; // Add offset for header
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      // Check if we're at the bottom of the page
+      if (scrollPosition + windowHeight >= documentHeight - 50) {
+        // If at bottom, select the last section (contact)
+        setSelectedSection(sectionIds[sectionIds.length - 1]);
+        return;
+      }
+
+      // Otherwise, use the existing logic
       let current = sectionIds[0];
       for (const id of sectionIds) {
         const el = document.getElementById(id);
@@ -60,15 +73,15 @@ export default function PortfolioLayout() {
         {/* Sidebar */}
         <aside className="lg:w-1/2 flex flex-col justify-between lg:h-[calc(100vh-160px)] gap-10 lg:sticky lg:top-24">
           {/* Name & Title */}
-          <header className="flex flex-col gap-2">
+          <header className="flex flex-col gap-2 text-center lg:text-left">
             <h1
-              className="text-5xl font-bold text-primary tracking-wide leading-loose max-w-[18ch]"
+              className="text-5xl font-bold text-primary tracking-wide leading-loose  lg:max-w-none"
               style={{ lineHeight: "1.2" }}
             >
-              {Profile.name}
+              <span className="inline-block max-w-[18ch]">{Profile.name}</span>
             </h1>
             <p className="text-lg font-medium text-primary">{Profile.title}</p>
-            <p className="text-base text-secondary leading-relaxed max-w-sm">
+            <p className="text-base text-secondary leading-relaxed max-w-sm lg:max-w-sm mx-auto lg:mx-0">
               {Profile.description}
             </p>
             {/* Navigation Links */}
@@ -134,10 +147,15 @@ export default function PortfolioLayout() {
 
           {/* Articles Section */}
           <Articles />
+          <Separator />
+
+          {/* Contact Section */}
+          <ContactForm />
+          <Separator />
 
           {/* Footer */}
-          <footer className="mt-auto pt-16">
-            <div className="text-sm text-secondary leading-relaxed">
+          <footer className="mt-auto ">
+            <div className="text-sm text-secondary leading-relaxed text-justify lg:text-left">
               {" "}
               <span>
                 Inspired by a{" "}
@@ -152,7 +170,7 @@ export default function PortfolioLayout() {
                 I admired. Rebuilt with Next.js & Tailwind CSS, deployed with
                 Vercel.
               </span>
-              <Separator />
+              {/* <Separator /> */}
               <div className="mt-4 text-xs text-muted italic text-center">
                 &ldquo;I look forward to tomorrow, but can I leave yesterday
                 behind?&rdquo;
