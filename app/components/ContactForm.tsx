@@ -111,7 +111,7 @@ const ContactForm = () => {
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
           <p className="text-secondary leading-relaxed">
-            I'm always interested in hearing about new opportunities and
+            I&apos;m always interested in hearing about new opportunities and
             exciting projects. Whether you have a question or just want to say
             hi, feel free to reach out!
           </p>
