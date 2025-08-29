@@ -366,6 +366,7 @@ export const personalProjects = [
     bookmarked: "",
     link: "https://gunplasekai.com/customize",
     demoLink: "https://youtu.be/c0t6mm4dGpI?si=9X6-IziscScckVyf",
+    embed: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/c0t6mm4dGpI?si=WD2eTFeJkO3DHTkk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
     company: {
       name: "",
       url: "",
@@ -391,6 +392,7 @@ export const personalProjects = [
     bookmarked: "",
     link: "https://custom-kickz-seven.vercel.app/",
     demoLink: "https://youtu.be/TbbWOujHskw?si=02mo8-qy4Ok8ciah",
+    embed: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/TbbWOujHskw?si=NJYp-CTVz-SF-Y8G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
     company: {
       name: "",
       url: "",

@@ -20,6 +20,7 @@ export interface Project {
   bookmarked: string;
   builtWith: string[];
   demoLink?: string;
+  embed?: string;
   company: {
     url: string;
     name: string;

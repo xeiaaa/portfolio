@@ -1,10 +1,69 @@
 import { personalProjects } from "../constants";
 import { Project } from "../types";
 import PillBadge from "./PillBadge";
-import { Star, ArrowUpRight, Link } from "lucide-react";
+import { Star, ArrowUpRight, Link, X, Play } from "lucide-react";
 import SectionTitle from "./SectionTitle";
+import { useState } from "react";
 
-const renderProject = (project: Project) => {
+const VideoModal = ({
+  isOpen,
+  onClose,
+  embed,
+  projectTitle,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+  embed: string;
+  projectTitle: string;
+}) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center">
+      {/* Backdrop */}
+      <div
+        className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+        onClick={onClose}
+      />
+
+      {/* Modal */}
+      <div className="relative z-10 w-full max-w-screen-xl mx-4">
+        <div className="relative bg-white rounded-lg overflow-hidden shadow-2xl">
+          {/* Header */}
+          <div className="flex justify-between items-center p-2 sm:p-4 border-b">
+            <h3 className="text-sm sm:text-lg font-semibold">
+              {projectTitle} Demo Video
+            </h3>
+            <button
+              onClick={onClose}
+              className="p-1 sm:p-2 hover:bg-gray-100 rounded-full transition-colors"
+            >
+              <X className="w-4 h-4 sm:w-5 sm:h-5" />
+            </button>
+          </div>
+
+          {/* Video Content */}
+          <div className="p-0">
+            <div
+              className="relative w-full"
+              style={{ paddingBottom: "56.25%" }} // 16:9 aspect ratio
+            >
+              <div
+                className="absolute inset-0"
+                dangerouslySetInnerHTML={{ __html: embed }}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const renderProject = (
+  project: Project,
+  onOpenModal: (embed: string, title: string) => void
+) => {
   return (
     <a
       href={project.link}
@@ -47,19 +106,20 @@ const renderProject = (project: Project) => {
             {project.description}
           </p>
           <div className="flex flex-col mt-2 gap-2">
-            {/* Related Links Section */}
-            {project.demoLink && (
+            {/* Demo Button Section */}
+            {project.demoLink && project.embed && (
               <div className="flex flex-wrap items-center gap-4">
-                <a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-highlight flex items-center gap-1 hover:underline"
-                  onClick={(e) => e.stopPropagation()}
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    onOpenModal(project.embed!, project.title);
+                  }}
+                  className="text-sm text-highlight flex items-center gap-1 hover:underline bg-transparent border-none p-0 cursor-pointer"
                 >
-                  <Link className="w-3 h-3" />
-                  Youtube Demo
-                </a>
+                  <Play className="w-3 h-3" />
+                  Watch Demo
+                </button>
               </div>
             )}
             <div className="flex flex-wrap items-center gap-4">
@@ -93,6 +153,22 @@ const renderProject = (project: Project) => {
 };
 
 const PersonalProjectPreviews = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentEmbed, setCurrentEmbed] = useState("");
+  const [currentProjectTitle, setCurrentProjectTitle] = useState("");
+
+  const handleOpenModal = (embed: string, title: string) => {
+    setCurrentEmbed(embed);
+    setCurrentProjectTitle(title);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setCurrentEmbed("");
+    setCurrentProjectTitle("");
+  };
+
   return (
     <section id="personal-projects" className="flex flex-col scroll-mt-11">
       <SectionTitle title="Personal Projects" />
@@ -102,8 +178,16 @@ const PersonalProjectPreviews = () => {
         {personalProjects
           .sort((a, b) => parseInt(b.date) - parseInt(a.date))
           .slice(0, 5)
-          .map((project) => renderProject(project))}
+          .map((project) => renderProject(project, handleOpenModal))}
       </div>
+
+      {/* Video Modal */}
+      <VideoModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        embed={currentEmbed}
+        projectTitle={currentProjectTitle}
+      />
     </section>
   );
 };
