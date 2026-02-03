@@ -330,6 +330,24 @@ export const projects = [
 
 export const personalProjects = [
   {
+    title: "Cosmic Hangar",
+    date: "2025",
+    builtWith: ["React", "ThreeJS", "TypeScript"],
+    description:
+      "A platform for exploring and interacting with 3D Gunpla (Gundam plastic model) designs. Features real-time 3D model rendering and customization tools for hobbyists to showcase their builds.",
+    image: "/thumbnails/gunpla-sekai.png",
+    video: "",
+    downloads: "",
+    bookmarked: "",
+    link: "https://cosmichangar.com",
+    demoLink: "https://youtu.be/c0t6mm4dGpI?si=9X6-IziscScckVyf",
+    embed: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/c0t6mm4dGpI?si=WD2eTFeJkO3DHTkk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    company: {
+      name: "",
+      url: "",
+    },
+  },
+  {
     title: "Chari-ty",
     date: "2025",
     builtWith: [
@@ -349,24 +367,6 @@ export const personalProjects = [
     downloads: "",
     bookmarked: "",
     link: "https://www.chari-ty.com/",
-    company: {
-      name: "",
-      url: "",
-    },
-  },
-  {
-    title: "Gunpla Sekai",
-    date: "2025",
-    builtWith: ["Next.js", "React", "Model Viewer", "TypeScript"],
-    description:
-      "A platform for exploring and interacting with 3D Gunpla (Gundam plastic model) designs. Features real-time 3D model rendering and customization tools for hobbyists to showcase their builds.",
-    image: "/thumbnails/gunpla-sekai.png",
-    video: "",
-    downloads: "",
-    bookmarked: "",
-    link: "https://gunplasekai.com/customize",
-    demoLink: "https://youtu.be/c0t6mm4dGpI?si=9X6-IziscScckVyf",
-    embed: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/c0t6mm4dGpI?si=WD2eTFeJkO3DHTkk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
     company: {
       name: "",
       url: "",
