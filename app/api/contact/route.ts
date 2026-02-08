@@ -1,6 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type, Authorization",
+};
+
+export async function OPTIONS() {
+  return NextResponse.json({}, { status: 200, headers: corsHeaders });
+}
+
 export async function POST(request: NextRequest) {
   try {
     const { name, email, subject, message } = await request.json();
@@ -9,7 +19,7 @@ export async function POST(request: NextRequest) {
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
         { error: "All fields are required" },
-        { status: 400 }
+        { status: 400, headers: corsHeaders }
       );
     }
 
@@ -18,7 +28,7 @@ export async function POST(request: NextRequest) {
     if (!emailRegex.test(email)) {
       return NextResponse.json(
         { error: "Invalid email format" },
-        { status: 400 }
+        { status: 400, headers: corsHeaders }
       );
     }
 
@@ -57,13 +67,13 @@ This message was sent from your portfolio contact form.
 
     return NextResponse.json(
       { message: "Message sent successfully" },
-      { status: 200 }
+      { status: 200, headers: corsHeaders }
     );
   } catch (error) {
     console.error("Contact form error:", error);
     return NextResponse.json(
       { error: "Failed to send message" },
-      { status: 500 }
+      { status: 500, headers: corsHeaders }
     );
   }
 }
